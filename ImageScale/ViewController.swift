@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet private weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        imageView.image = UIImage(data: try! Data(contentsOf: Bundle.main.url(forResource: "pic", withExtension: "png")!), scale: UIScreen.main.scale)
     }
 
 
