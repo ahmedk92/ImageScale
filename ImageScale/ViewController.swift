@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Comment this line to see the image loaded
+        // with a scale factor of 1.0 which leads
+        // to an undesired frame size.
         imageView.image = UIImage(data: try! Data(contentsOf: Bundle.main.url(forResource: "pic", withExtension: "png")!), scale: UIScreen.main.scale)
     }
 
